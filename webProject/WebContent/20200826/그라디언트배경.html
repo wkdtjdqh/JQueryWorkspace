@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>그라디언트 배경</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<style>
+		
+			.box result1, .box div{
+			width: 500px;
+			height: 300px;
+		
+			border : 1px solid blue;
+			margin: 5px;
+			padding : 10px;
+			text-align: center;
+			
+			}
+			#result1{
+			background-image: linear-gradient(#e9f5a6, #f5f3dc); /*linear : 그라데이션효과 */
+			
+			
+			}
+			#result2{
+			background-image: linear-gradient(to right, #e9f5a6, #abeced);
+			
+			
+			}
+			#result3{
+			background-image: linear-gradient(45deg, #e9f5a6, #72c49e);
+			
+			
+			}
+			#result4{
+			background-image: linear-gradient(#abeced 10%, #e9f5a6 50%, #fae2af);
+			
+			
+			}
+		
+		</style>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>그라디언트 배경</h3>
+			<input type = "button" value ="확인">
+			<div id = "result1">
+			background-image: linear-gradient(#e9f5a6, #f5f3dc);
+			</div>
+			<div id = "result2">
+			background-image: linear-gradient(to right, #e9f5a6, #abeced);
+			</div>
+			<div id = "result3">
+			background-image: linear-gradient(45deg, #e9f5a6, #72c49e);
+			</div>
+			<div id = "result4">
+			background-image: linear-gradient(#abeced 10%, #e9f5a6 50%, #fae2af);
+			</div>
+		</div>
+	</body>
+</html>

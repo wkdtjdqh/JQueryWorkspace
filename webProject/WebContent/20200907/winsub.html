@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>winsub</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		function proc1(){
+			
+			nameVal = document.getElementById('name').value.trim();
+			
+			//자식 창에서 입력한 값을 부모 창에서 나타낸다
+			
+			opener.document.getElementById('result1').innerHTML = nameVal;
+// 			opener.document.getElementById('result1').textcotent = nameVal;
+
+			window.close();
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>window sub창 띄우기</h3>
+			입력받은 이름을 부모창에 출력한다<br>
+			부모창을 나타내는 속성 : opener<br>
+			<input type  = "text" id = "name"><br>
+			<input type = "button" value ="확인" onclick = "proc1()">
+		</div>
+	</body>
+</html>

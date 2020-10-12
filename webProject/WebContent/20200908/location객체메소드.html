@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location 객체 메서드</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<style>
+	
+		</style>
+		<script>
+		
+		function proc2() {
+			
+			//페이지 이동
+			location.href = "/webProject/test.jsp";			
+		}
+		function goPage(){
+			
+			
+// 			location.href = "/webProject/test.jsp";	
+			location.href = "/webProject/test.jsp?id=kk";	// get방식
+			
+		}
+		function goPagePost() {
+			
+			document.myForm.action = "testpost.jsp"; 
+			document.myForm.method = "post";
+			document.myForm.submit();
+			
+		}
+		
+		function goReplace(str) {
+			
+			//실행 후 뒤로가기가 안된다
+			location.replace(str);
+		}
+		function goReload() {
+			
+			//배열과 랜덤을 이용
+			//랜덤을 발생하여 배열의 값을 선택
+			//result1에 출력한다 -3초후에 출력전 화면으로 돌아간다
+			
+			str =["Hello", "Happy","javascript","jQuery","HTML","CSS"];
+			
+			rand = Math.floor(Math.random()*str.length); //str의 길이를 random으로 지정한다
+			
+			//출력하기
+			out = document.querySelector('#result1');
+			out.innerHTML = str[rand];
+			out.style.color = 'red';
+			out.style.fontSize = '2.0em';
+			
+			setTimeout(function(){location.reload()} , 3000)
+		}
+		</script>
+	</head>
+	<body>
+		
+		
+		
+		
+		<div class ="box">
+			<h3>location 객체</h3>
+			- 자동으로 특정페이지 이동시 사용(location.href ='')
+			<input type = "button" value ="페이지이동" onclick ="proc2()"><br>
+			
+			
+			- a태그 이용(location.href ='') <a href ="javascript:goPage()">공지사항 목록</a><br>
+			
+			
+			- 이벤트 사용 (get,location.href ='') <input type ="button" onclick ="goPage()" value="공지사항목록" onclick =""><br>
+			
+			
+			- 이벤트사용 (post)
+			<form name =  "myForm">
+				<input  type = "hidden" value = "korea" name ="name">
+				<input type ="button" value="공지사항목록" onclick ="goPagePost()"><br>
+			</form><br>
+			
+			
+			
+			- 새로운 문서로 대체(뒤로가기가 안된다) <input onclick = "goReplace('/webProject/test.jsp')"type="button" value="공지사항목록"><br>
+			
+			- 현재문서를 다시로드<input type="button" value="페이지재호출" onclick ="goReload()"><br>
+			<br>
+			<div id = "result1"></div>
+		</div>
+	</body>
+</html>

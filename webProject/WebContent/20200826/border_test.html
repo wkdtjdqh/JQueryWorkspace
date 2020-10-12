@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>borderTest</title>
+		<link href ="../CSS/public.css" rel = "stylesheet">
+		<style>
+		#result2,#result3,#result4,#result5,#result6,#result7,#result8{
+		
+			background-color :#e9f5a6;
+			border : 1px solid orange;
+			padding : 50px;
+			margin : 10px;
+			
+		
+		}
+		#result2{
+			
+			border : 4px double blue;
+			border-radius : 100px;
+		
+		}
+		#result3{
+			border-width :1-px;
+			border-style : inset;
+			border-color :red;
+			border-radius : 100px 50px;
+		
+		}
+		#result4{
+			
+			border-width :1-px;
+			border-style : outset;
+			border-color :red;
+			border-radius : 0px 200px 100px;
+		
+		}
+		#result5{
+		
+			border-top : 3px dotted green;
+			border-bottom : 5px solid green;
+			border-radius :50%;
+		
+		}
+		#result6{
+		
+			border-left-width : 10px ;
+			border-left-style : dashed ;
+			boder-left-color : orange; 
+			border-right : 5px dashed orange;
+			
+			width : 400px;
+			height : 400px;
+			border-radius : 50%;
+			
+			text-align : center;
+		}
+		#result7{
+		
+			border : 20px groove green;
+			border-radius : 50px 100px 200px 300px;
+		}
+		#result8{
+			border : 20px ridge green;
+			box-shadow : 20px 10px 5px #666666;
+		}
+		.box #result1{
+		
+			border-width : 20px 10px 5px;
+			border-style : solid double;
+			border-color : orange red blue;
+		
+		}
+		
+		
+		</style>
+		
+	</head>
+	<body>
+		<h3>border설정</h3>
+		<div class ="box"> 
+		
+			<div id ="result1">
+				border-width : 20px 10px 5px;<br>
+				border-style : solid double;<br>
+				border-color : orange red blue;
+			
+			</div>
+			
+			<div id ="result2">
+				border : 4px double blue;<br>
+				border-radius : 100px;
+			</div>
+			
+			<div id ="result3">
+				border-width :1-px;<br>
+				border-style : inset;<br>
+				border-color :red;<br>
+				border-radius : 100px 50px;
+		
+			
+			</div>
+			
+			<div id ="result4">
+			
+				border-width :1-px;<br>
+				border-style : outset;<br>
+				border-color :red;<br>
+				border-radius : 0px 200px 100px;
+			</div>
+			
+			<div id ="result5">
+				border-top : 3px dotted green;<br>
+				border-bottom : 5px solid green;<br>
+				border-radius :50%
+			</div>
+			<div id ="result6">
+				border-left-width : 10px ;<br>
+				border-left-style : dashed ;<br>
+				boder-left-color : orange;<br> 
+				border-right : 5px dashed orange;<br>
+				width : 400px;<br>
+				height : 400px;<br>
+				border-radius : 50%;
+			</div>
+			<div id ="result7">
+				border : 20px groove green;<br>
+				border-radius : 50px 100px 200px 300px;
+			</div>
+			<div id ="result8">
+				border : 20px ridge green;<br>
+				box-shadow : 20px 10px 5px #666666;
+			</div>
+		</div>
+		
+	</body>
+</html>

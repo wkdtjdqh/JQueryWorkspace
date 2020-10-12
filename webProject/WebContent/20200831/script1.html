@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script1</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		function proc1(){
+			alert("Hello~!!");
+			//date 객체를 생성한다
+			var now = new Date();
+// 			DOCUMENT.WRITE(NOW);
+
+//			HTML요소 id가 result1인 요소를 검색
+// 			document.querySelector('#result1');
+			let vres = document.getElementById('result1');
+			vres.innerHTML = now; //innerHTML : res값을 출력할 때 사용
+			
+		}
+		function proc2(){
+			
+			now = new Date();
+			dateTime = now.toLocaleString();
+			date = now.toLocaleDateString();
+			time = now.toLocaleTimeString();
+			
+			
+			vr2 = document.getElementById('result2');
+			vr2.innerHTML = "toLocaleString : " + dateTime  + "<br>";
+			vr2.innerHTML += "toLocaleDateString : " + date + "<br>";
+			vr2.innerHTML += "toLocaleTimeString : " + time + "<br>";
+			
+		}
+		
+		
+		
+		</script>
+	</head>
+	<body>
+		<div class ="box">
+			<h3>스크립트1</h3>
+			변수 선언 : var 변수명; let 변수명;, const 변수명; 변수명;
+			 <!-- const는 값을 변형시키지 말아야할 때 사용 ==> 상수역할 -->
+			 <!-- for문에서는  const를 사용할 수 없다-->
+			<input type = "button" value ="확인" onclick ="proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>스크립트1</h3>
+			날짜 형식 변경<br>
+			now.toLocaleString();<br>
+			now.toLocaleDateString();<br>
+			now.toLocaleTimeString();<br>
+			출력<br>
+			
+			vr2 = document.getElementById('result2');<br>
+			vr2.innerHTML = 내용속에 html 태그가 있으면<br>
+			vr2.textContent = 내용속에 태그가 없으면<br>
+			
+			<input type = "button" value ="확인" onclick ="proc2()">
+			<div id = "result2"></div>
+		</div>
+	</body>
+</html>

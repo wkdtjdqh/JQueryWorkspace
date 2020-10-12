@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>텍스트 스타일</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+			window.onload = function(){
+				vp = document.querySelectorAll('p');
+			}
+			function proc1(){
+				vp[0].style.fontSize = '3.0em';
+			
+			}
+			function proc2(){
+				vp[1].style.letterSpacing = '30px';
+			
+			}
+			function proc3(){
+				vp[2].style.lineHeight = '20px';
+				//.lineHeight : 줄간격
+			}
+			function proc4(){
+				vp[3].style.textAlign = 'right';
+				//textAlign : 정렬
+			}
+			function proc5(){
+				vp[4].style.textDecoration = 'underline';
+				
+			}
+			function proc6(){
+				vp[5].style.textIndent = '20px';
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<h3>Text스타일</h3>
+			<div class ="dd" id = "div1">
+					<input type = "button" value ="확인" onclick = "proc1()">
+				<p><strong>유네는 짱귀여워</strong></p>
+			</div>
+			<div class ="dd" id = "div2">											
+						<input type = "button" value ="확인" onclick = "proc2()">
+						<h2>vp[1].style.letterSpacing =  글자간격</h2>
+						<p>유네는 짱귀여워</p>
+			</div>
+			<div class ="dd" id = "div3">											
+						<input type = "button" value ="확인"onclick = "proc3()">
+						<h2>vp[2].style.lineHeight = 줄간격</h2>
+						<p>유네는 짱귀여워</p>
+			</div>
+			<div class ="dd" id = "div4">											
+						<input type = "button" value ="확인" onclick = "proc4()">
+						<h2>vp[3].style.textAlign = 오른쪽 정렬</h2>
+						<p>유네는 짱귀여워</p>
+			</div>
+			<div class ="dd" id = "div5">											
+						<input type = "button" value ="확인" onclick = "proc5()">
+						<h2>vp[4].style.textDecoration = 밑줄</h2>
+						<p>유네는 짱귀여워</p>
+			</div>
+			<div class ="dd" id = "div6">											
+						<input type = "button" value ="확인" onclick = "proc6()">
+						<h2>vp[5].style.textIndent = 들여쓰기</h2>
+						<p>유네는 짱귀여워</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

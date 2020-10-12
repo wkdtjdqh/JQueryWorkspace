@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>date객체2</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		today = new Date();
+	
+		
+		function proc1(){
+			
+				nowtime = today.getTime(); //오늘 날짜의 getTime
+				
+				//500일의 getTime(millisec)
+				time  = 1000*60*60*24*100
+				
+				sumTime = nowtime + time;
+				
+				day = new Date(sumTime);
+				
+				out = document.querySelector('#result1');
+				out.innerHTML = "오늘 날짜 : " + today.toLocaleDateString() + "<br>";
+				out.innerHTML += "100일 후 날짜 : " + day.toLocaleDateString() + "<br>";
+			
+		}</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>n일 후의 날짜</h3>
+			getTime에 의해 현재의 millisec을 구한다<br>
+			100일의 millisec을 구한다<br>
+			millisec을 구할 때는 곱하기 -> (1000*60*60*24*100)<br>
+			현재의 millisec와 100일의 millisec을 더한다<br>
+			더해진 값으로 Date객체를 생성한다<br>
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+	</body>
+</html>

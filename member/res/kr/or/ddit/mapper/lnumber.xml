@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+		PUBLIC "-//ibatis.apache.org/DTD SQL Map 2.0/EN"
+		"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!-- mapper : sql문이 실행되어지는 부분 -->
+
+<sqlMap namespace="member">
+	
+	<!-- 실행시(daoIMpl에서) queryForList('namespace.id이름') -->
+	<select id="selectAllMember" resultClass="MemVo">
+		select * from member
+	
+	</select>
+
+
+
+</sqlMap>

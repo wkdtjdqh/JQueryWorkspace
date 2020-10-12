@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getDay 요일구하기</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		now = new Date();
+		function proc1() {
+			
+			
+			
+			
+			res = "오늘 : " + now.toLocaleDateString(); + "<br>"
+			day = now.getDay();
+// 			alert(day);
+			
+			switch(day){
+			case 0:
+				res += "일요일";
+				break;
+			case 1:
+				res += "월요일";
+				break;
+				
+			case 2:
+				res += "화요일";
+				break;
+				
+			case 3:
+				res += "수요일";
+				break;
+				
+			case 4:
+				res += "목요일";
+				break;
+				
+			case 5:
+				res += "금요일";
+				break;
+				
+			case 6:
+				res += "토요일";
+				break;
+			
+			}
+			
+			document.querySelector('#result1').innerHTML = res;
+			
+		}
+		
+		function proc2(){
+			
+			days = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
+			
+			res = "오늘 : " + now.toLocaleDateString() + "<br>";
+			res += days[now.getDay()] + "입니다" + "<br>";
+			
+			document.querySelector('#result2').innerHTML = res;
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>getDay 요일구하기</h3>
+			
+			getDay() : 0~6 일요일~토요일<br>
+			
+			switch()비교<br>
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>getDay 요일구하기</h3>
+			
+			getDay() : 0~6 일요일~토요일<br>
+			배열을 이용 : days = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
+			
+			
+			<input type = "button" value ="확인" onclick = "proc2()">
+			<div id = "result2"></div>
+		</div>
+	</body>
+</html>

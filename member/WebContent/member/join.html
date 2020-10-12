@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>join test 페이지</title>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+		  
+		  
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="../js/jquery.serializejson.min.js"></script>
+		
+		<script>
+		
+			$(function(){
+
+			})
+		</script>
+		<style type="text/css">
+		
+		.box h2{
+		
+		font-family: 'Noto Serif KR', serif;
+		
+		font-weight: 700;
+		
+		}
+		
+		.box label, .btn{
+		
+		font-family: 'Noto Serif KR', serif;
+		
+		font-weight: 500;
+		
+		font-size: 1.5rem;
+		
+		
+		}
+		
+		</style>
+		
+	</head>
+	<body>
+		<div class ="box">
+		<div class="container">
+		  <h2>회원가입</h2>
+		  <form class="form-horizontal" action="" id= "form">
+		  
+		  <!-- 아이디 -->
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_id">아이디 :</label>
+		      <div class="col-sm-7">
+		        <input type="text" class="form-control" id="mem_id" placeholder="Enter id" name="mem_id">
+		       	<span class= "sp" id= "spID"></span>  <!--아이디 중복검사 msg -->
+		       	<div class="msg" id = "msgID"></div>  <!--아이디 유효성 검사 msg -->
+			  </div>
+		     	<button id ="btnID" type="button" class = "btn btn-success">중복검사</button>
+		    </div>
+		    
+		    
+		  <!-- 비밀번호-->
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_pass">비밀번호:</label>
+		      <div class="col-sm-7">          
+		        <input type="password" class="form-control" id="mem_pass" placeholder="Enter password" name="mem_pass">
+		     	<span class = "sp"></span>
+		      	<div class = "msg" id = "msgPass"></div>
+		      </div>
+		    </div>
+		    
+		  <!-- 비밀번호 확인-->
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="chk_pass">비밀번호 확인:</label>
+		      <div class="col-sm-7">          
+		        <input type="password" class="form-control" id="chk_pass" placeholder="Enter Your password Check">
+		      	<span class = "sp"></span>
+		      	<div class = "msg" id = "msgPass2"></div>
+		      
+		      </div>
+		    </div>
+		    
+		  <!-- 이름 -->
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_name">이름:</label>
+		      <div class="col-sm-7">          
+		        <input type="text" class="form-control" id="mem_name" placeholder="Enter Name" name = "mem_name">
+		      	<span class = "sp"></span>
+		      	<div class = "msg" id = "msgName"></div>
+		      
+		      </div>
+		    </div>
+		    
+		  <!-- 생년월일 -->
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_bir">생년월일:</label>
+		      <div class="col-sm-7">          
+		        <input type="date" class="form-control" id="mem_bir"  name = "mem_name">
+		      	<span class = "sp"></span>
+		      	<div class = "msg" id = "msgBir"></div>
+		      
+		      </div>
+		    </div>
+		    
+		  <!-- 휴대폰 번호 -->
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_hp">휴대폰 번호:</label>
+		      <div class="col-sm-7">          
+		        <input type="text" class="form-control" id="mem_hp" placeholder="Enter HP" name = "mem_hp">
+		      	<span class = "sp"></span>
+		      	<div class = "msg" id = "msgHp"></div>
+		      
+		      </div>
+		    </div>
+		    
+		    
+		  <!-- 이메일 -->
+		    
+		    <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_mail">Email:</label>
+		      <div class="col-sm-7">
+		        <input type="email" class="form-control" id="mem_mail" placeholder="Enter email" name="mem_mail">
+		      	<span class = "sp"></span>
+		      	<div class = "msg" id = "msgMail"></div>
+		      </div>
+		    </div>
+		    
+		  
+		  <!-- 주소입력 양식 -->
+		  <!-- 우편번호 -->
+		  <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_zip">우편번호 :</label>
+		      <div class="col-sm-7">
+		        <input type="text" class="form-control" id="mem_zip" name="mem_zip">
+		      </div>
+		      <button data-toggle="modal" data-target="#myModal" type="button" id = "btnZip"class = "btn btn-success">우편번호 찾기</button>  <!-- modal -->
+		  </div>
+		    
+		  <!-- 주소 -->
+		  <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_add1">주소 :</label>
+		      <div class="col-sm-7">
+		        <input type="text" class="form-control" id="mem_add1" name="mem_add1">
+		      </div>
+		      
+		  </div>
+		  <div class="form-group">
+		      <label class="control-label col-sm-2" for="mem_add2">상세 :</label>
+		      <div class="col-sm-7">
+		        <input type="text" class="form-control" id="mem_add2" name="mem_add2">
+		      </div>
+		      
+		  </div>
+		  
+		  <!-- 버튼 -->
+		    <div class="form-group">        
+		      <div class="col-sm-offset-2 col-sm-10">
+		        <button id = "btnJoin"type="button" class="btn btn-success">가입신청</button>
+		        <span id = "spanBtn"></span>
+		        <button id = "btnReset "type="reset" class="btn btn-warning">초기화</button>
+		      </div>
+		    </div>
+		  </form>
+		</div>
+		</div>
+		  <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">우편번호 찾기</h4>
+		        </div>
+		        <div class="modal-body">
+		        <p>찾는 동을 입력하세요</p>
+		        <input type="text" id ="dong">
+		        <input type="button" id = "btnDong" value="검색">
+		        <div id = "result1"></div>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		          <span id></span>
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>
+		
+<!-- 		<script src="../js/memberreg.js"></script> -->
+		<script src="../js/memberJoin.js"></script>
+	</body>
+</html>

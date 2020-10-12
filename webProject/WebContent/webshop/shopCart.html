@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href ="../CSS/joinpage.css" rel ="stylesheet">
+		<script>
+		function proc1(){
+			
+			cnt = document.getElementById('cnt1');
+			sum = document.getElementById('sum1');
+			sum.value = parseInt(cnt.value) * 200000;
+				
+	}
+		function proc2(){
+			
+			cnt = document.getElementById('cnt2');
+			sum = document.getElementById('sum2');
+			sum.value = parseInt(cnt.value) * 50000;
+				
+	}
+		function proc3(){
+			
+			cnt = document.getElementById('cnt3');
+			sum = document.getElementById('sum3');
+			sum.value = parseInt(cnt.value) * 1000;
+				
+	}
+		function proc4(){
+			
+			cnt = document.getElementById('cnt4');
+			sum = document.getElementById('sum4');
+			sum.value = parseInt(cnt.value) * 5000;
+				
+	}
+	
+		
+		</script>
+	</head>
+	<body>
+		<div class ="box" >
+		
+		<table border = "1">
+		<caption style ="text-decoration : underline; color : red;">Shopping Cart</caption>
+		<tr>
+		<th>품목</th>
+		<th>가격</th>
+		<th>수량</th>
+		<th>합계</th>
+		</tr>
+		<tr>
+		<td>컴퓨터 세트</td>
+		<td>2,000,000원</td>
+		<td><input type = "number" id = "cnt1" name = "수량" placeholder = "0" onchange ="proc1()"></td>
+		<td><input type = "text" value ="0" id = "sum1"></td>
+		</tr>
+		<tr>
+		<td>티셔츠</td>
+		<td>50,000원</td>
+		<td><input type = "number" name = "수량" placeholder = "0" id = "cnt2"onchange ="proc2()" ></td>
+		<td><input type = "text" value ="0" id = "sum2"></td>
+		</tr>
+		<tr>
+		<td>음악파일</td>
+		<td>1,000원</td>
+		<td><input type = "number" name = "수량" placeholder = "0" id = "cnt3" onchange ="proc3()"></td>
+		<td><input type = "text" value ="0"id = "sum3"></td>
+		</tr>
+		<tr>
+		<td>영화파일</td>
+		<td>5,000원</td>
+		<td><input type = "number" name = "수량" placeholder = "0" id = "cnt4"onchange ="proc4()" ></td>
+		<td><input  type = "text" value ="0" id = "sum4"></td>
+		</tr>
+		</table>
+		<br>
+		<input type = "button" value ="계산">
+		<input type ="button" value ="구매">
+		<input type = "reset" value ="초기화">
+		
+		</div>
+		<br>
+		<a href = "../webshop/main.html">Back to Home</a>
+		
+	</body>
+</html>

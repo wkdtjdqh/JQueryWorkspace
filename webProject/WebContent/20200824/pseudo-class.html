@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>의사클래스 선택</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<style>
+			a{
+				border : 2px solid blue;
+				padding : 10px;
+				margin : 10px;
+				}
+			a:link{
+				color : green;
+				text-decoration : none;
+				
+			}
+			a:visited{
+				color : red;
+			}
+			a:hover{
+				background :lime;
+			}
+			a:active{
+				font-size :1.5em;
+				color :blue;
+				text-decoration : underline;;
+			}
+			table{
+		
+			}
+			td{
+			width : 200px;
+			height : 50px;;
+			text-align : center;
+			}
+	
+			tr:nth-child(even){   
+ 			background : lightblue; 
+			}
+			tr:nth-child(odd){
+			background :lightgreen; 
+			}
+			tr:nth-child(1){
+			background : black;
+			color : white;
+			}
+			
+			#table2 tr:nth-child(even){
+			background : #f27250; 
+			
+			}
+			#table2 tr:nth-child(odd){
+			background :#f7f0c3; 
+			}
+			#table2 tr:nth-child(1){
+				background : #915c3d;
+				font-weight : 50px;
+				color : white;
+			}
+			h3[title]{
+			background : skyblue;
+			font :bold 40px;
+			}
+			caption{
+				margin : 30px auto;
+				caption-side: bottom;
+				font-size : 1.5em;
+			
+			}
+			table{
+				border-collapse: collapse;
+				
+				/*collapse : 테두리가 1줄로 표현된다*/
+			
+			}
+			
+	
+				
+		</style>
+	</head>
+	<body>
+			<div class = "box">
+				<h3 title = "상태클래스">1. 의사클래스</h3>
+				<!-- title은 누르면 상세설명 -->
+				상태나 구조에 의한 선택이 이루어 진다 <br>
+				상태 : :link :visited :hover :active <br>
+				구조 : :nth-child(index) nth-child(even) nth-child(odd)
+						: nth-child(2n-1)<br>
+				<input title = "버튼"  type = "button" value ="확인">
+				<br>
+				<div  id = "result1" >
+					상태에 의한 선택<br><br>
+					<a href ="http://www.naver.com">네이버</a>
+					<a href ="http://www.daum.net">다음</a>
+					<a href ="coffee.html">coffee</a>
+					<a href ="http://www.w3schools.com">w3school</a>
+				</div>
+			
+			</div>
+			
+				<div class = "box">
+			<h3>2. 의사클래스</h3>
+				상태나 구조에 의한 선택이 이루어 진다 <br>
+				상태 : :link :visited :hover :active <br>
+				구조 : :nth-child(index) nth-child(even) nth-child(odd)
+						: nth-child(2n-1)<br>
+				<input type = "button" value ="확인">
+				<br><br>
+				테두리의 선 합치기 border-collapse : collapse;<br>
+				테이블 제목&lt;caption&gt;VipList&lt;/caption&gt;
+				<br>
+				<div  id = "result1" >
+					구조 의한 선택<br><br>
+					<table border ="1" id = "table1">
+						<tr>
+							<td>이름</td>
+							<td>주소</td>
+						</tr>
+						<tr>
+							<td>홍길동</td>
+							<td>대전</td>
+						</tr>
+						<tr>
+							<td>이윤혜</td>
+							<td>서울</td>
+						</tr>
+						<tr>
+							<td>장상구</td>
+							<td>부산</td>
+						</tr>
+						<tr>
+							<td>영섭군</td>
+							<td>청주</td>
+						</tr>
+					</table>
+					<br><br>
+					<table border ="1" id = "table2">
+					<caption>vipList</caption>
+						<tr>
+							<td>이름</td>
+							<td>주소</td>
+						</tr>
+						<tr>
+							<td>홍길동</td>
+							<td>대전</td>
+						</tr>
+						<tr>
+							<td>이윤혜</td>
+							<td>서울</td>
+						</tr>
+						<tr>
+							<td>장상구</td>
+							<td>부산</td>
+						</tr>
+						<tr>
+							<td>영섭군</td>
+							<td>청주</td>
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+	</body>
+</html>

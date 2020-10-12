@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>입력받기</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		function proc1(){
+			//입력 받기
+			
+			var value1 = prompt("정수입력 1", "1~100사이");
+			var value2 = prompt("정수입력 2", "1~100사이");
+			
+			
+			
+			sumstr = value1 + value2;
+			sum = parseInt(value1) + parseInt(value2);
+			
+			
+			//출력
+			vr1 = document.querySelector('#result1');
+			vr1.innerHTML = "입력 1 : " + value1 + "<br>";
+			vr1.innerHTML += "입력  2 : " + value2 + "<br>";
+			vr1.innerHTML += "결과 : " + sumstr + "<br>";
+			vr1.innerHTML += "결과 : " + sum + "<br>";
+		}
+		function proc2(){
+			
+			 val1 = prompt("첫번째 숫자 입력");
+			 val2 = prompt("두번째 숫자 입력");
+			val3 = prompt("연산자입력","+,-,*,/,%");
+			
+			if(val3 == "+"){
+				sum = parseInt(val1) + parseInt(val2);
+			}else if(val3 == "-"){
+				sum = parseInt(val1) + parseInt(val2);
+			}else if(val3 == "*"){
+				sum = parseInt(val1) * parseInt(val2);
+				
+			}else if(val3 == "/"){
+				sum = parseInt(val1) / parseInt(val2);
+				
+			}else if(val3 == "%"){
+				sum = parseInt(val1) % parseInt(val2);
+				
+			}
+			vr2 = document.querySelector('#result2');
+			vr2.innerHTML = "입력 1 : " + val1 + "<br>";
+			vr2.innerHTML += "입력 2 : " + val2 + "<br>";
+			vr2.innerHTML += "결과 : " + val1 + val3 + val2 + "=" + sum;
+			
+			switch(val3){
+			case "+" :
+				sum = parseInt(val1) + parseInt(val2);
+				break;
+			case "-" :
+				sum = parseInt(val1) - parseInt(val2);
+				break;
+			case "*" :
+				sum = parseInt(val1) * parseInt(val2);
+				break;
+			case "/" :
+				sum = parseInt(val1) / parseInt(val2);
+				break;
+			case "%" :
+				sum = parseInt(val1) % parseInt(val2);
+				break;
+				
+			
+			}
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>입력받기</h3>
+			prompt("입력하세요","12345");
+			parameter1 : 필수
+			parameter2 : 선택
+			
+			
+			리턴결과형 : String
+			리턴결과 값을 정수로 변환 후 덧셈연산을 한다<br>
+			paseInt(입력값)<br>
+			<br>			
+			<input type = "button" value ="확인" onclick ="proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>입력받기</h3>
+			정수  2개와 연산자 1개를 입력 받아 연산의 결과를 출력<br>
+			입력 : prompt("정수1")
+			출력 : result2 <br>
+			<br>	
+			<input type = "button" value ="확인" onclick ="proc2()">
+			<div id = "result2"></div>
+		</div>
+	</body>
+</html>

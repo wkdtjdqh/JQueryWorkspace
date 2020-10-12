@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>요소 선택해보기</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script src="../js/jquery-3.5.1.min.js" ></script>
+		<script>
+		
+			$(function(){
+				cosole.log($('li'));
+				$('li').text('Orlando');
+
+			})
+		</script>
+	</head>
+	<body>
+		<h1> Where do you want to go?</h1>
+		<h2> Travel Destinations</h2>
+		<p>Plan your next adventure</p>
+		<ul id = "destinations">
+			<li>Rome</li>
+			<li>Paris</li>
+			<li class = "promo">Rio</li>
+		
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>LayoutTest</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+	</head>
+	
+	<style>
+	body{
+		min-width: 700px;
+	}
+	
+	header,nav,section,footer{
+		margin : 30px 0px;
+		padding : 10px;
+		border-sizing : border-box;
+	}
+	
+	header{
+		
+		border : 4px solid #ebb2b0;
+		width:  100%;
+		height: 200px;
+		border-radius :40px;
+		
+	}
+	header #hd{
+		font-size : 1.2em;
+		text-align : center;
+		
+	}
+	nav{
+	
+/* 		position : absolute; */
+/* 		top : 250px; */
+/* 		left :5px; */
+		
+		float :left; 
+		background: #f0c4c2;
+		width: calc(29% - 1%);
+		height : 700px;
+		font-size: 1.5em;
+		
+	}
+	nav p{
+		
+		text-align: center;
+	}
+	
+	section{
+/* 		position : absolute; */
+/* 		top : 250px; */
+/* 		right :5px; */
+
+		border : 2px solid #a69797;
+		float : right;
+		width: calc(70% - 1%);
+		height : 700px;
+	
+	}
+	section #sec{
+	
+			/*border : 2px solid #a69797;*/
+			/*background : #f0cdcc;*/
+			width : 70%;
+			height : 100px;
+			margin : 50px;
+			padding : 50px;
+	}
+	section #sec #sech{
+	
+			
+			background : #f0cdcc;
+			width : 300px;
+			height : 70px;
+			font-size : 2.5em;
+			padding : 0px 0px 0px 30px;
+	}
+	
+	
+	footer{
+
+		background: #d68683;
+		width : 100%;
+		clear:both;
+		border-radius :40px;
+		text-align : center;
+		padding : 10px;
+		
+	}
+	img{
+	
+		display : block;
+		margin-left: auto;
+		margin-right: auto;
+		width : 75%;
+	
+	}
+	
+	
+	</style>
+	<body>
+		<header>
+			<div id = "hd">
+				<h1>Home Sweet UNE Home</h1>
+				<p>시멘틱 태그로 유네가 만든 페이지 입니다</p>
+			</div>
+		</header>
+		<nav>
+			&nbsp;&nbsp;<h2>Links</h2>
+			<ul>
+				<li><a href ="https://www.naver.com/">Naver</a></li>
+				<li><a href ="https://www.google.co.kr/">GooGle</a></li>
+				<li><a href ="https://www.daum.net/">Daum</a></li>
+			</ul>
+			&nbsp;&nbsp;<img src = "../img/goggi.jpg" width = "300px">
+			<p>항정이
+			
+		</nav>
+		<section>
+			<div id = "sec">
+				<span>
+				<h3 id = "sech">Semantic Tags</h3>
+				<p>시멘틱 요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적은 명확하게 알려주는 요소이다. 
+					레이아웃을 만들 때 쓰는 것. 의미가 있는 요소라면 div보다는 시멘틴 태그를 사용해준다</p>
+				</span>
+			</div>
+			<div id = "sec">
+				<span>
+				<h3 id = "sech">div와 span</h3>
+				<p>div는 "divide"의 약자로서 페이지를 논리적인 섹션으로 분리하는데 사용되는 태그이다 
+					span요소는 인라인 요소로서 텍스트를 위한 컨테로 사용할 수 있다</p>
+				</span>
+			</div>
+		
+		</section>
+		<footer>
+		<p>Copyright (<sub>c</sub>)2020 UNE</p></footer>
+	</body>
+</html>

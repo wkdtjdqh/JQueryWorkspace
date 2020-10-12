@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열연습</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		function proc1() {
+			
+			//배열 선언
+			
+			arr = [];
+			
+			while(true){
+				
+				//입력 
+				a = prompt("사람이름을 입력하세요");
+				
+				
+				//입력한 값 비교 break조건(공백문자이거나 취소버튼 null)
+				if(a == null || a == ""){
+					break;
+				}
+				
+				
+				//입력한 값을 배열에 저장
+				 arr.push(a);
+			}
+			
+			//출력
+			
+			res = "이름 : " + arr + "<br>";
+			document.querySelector('#result1').innerHTML = res;
+			
+		}
+		function proc2() {
+			
+		arr = [];
+		
+			
+			while(true){
+				
+				//입력 
+				a = prompt("정수를 입력하세요");
+				idx = 0;
+						
+				flag = true;
+				
+				
+				//중복된 값인지 아닌지 비교 
+				idx = arr.indexOf(a,idx);
+				
+				//중복값이면 continue;(idx가-1이면)
+				if(idx > -1 ){
+					continue;
+				}
+				 arr.push(a);
+				 
+				 if(arr.length >= 5){
+					 break;
+				 }
+			
+				
+			}
+			
+			//출력
+			
+			res = "이름 : " + arr + "<br>";
+			document.querySelector('#result2').innerHTML = res;
+			
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>연습1</h3>
+			사람 이름을 계속 입력 받아 배열에 저장하고 그 저장된 이름을 출력하는 프로그램을 작성하시오.<br>
+			입력 :  prompt() <br>
+			종료 : 공백 문자 나 취소버튼으로 한다 <br>
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>연습2</h3>
+			서로 중복되지 않은 정수 5개를 입력 받아 출력하는 프로그램을 작성하시오<br>
+			<input type = "button" value ="확인" onclick = "proc2()">
+			<div id = "result2"></div>
+		</div>
+	</body>
+</html>

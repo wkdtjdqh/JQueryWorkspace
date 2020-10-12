@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window객체</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		
+		<script>
+		
+		function proc1(){
+			
+														//_blank : 새탭열기  _self현재탭열기 top 현재 화면 기준
+// 			window.open("Math객체.html","_blank","top = 200 left = 300 width = 100 height = 100"); //open()안에 값은 선택사항 : 새창열기 
+			window.open("winsub.html","_blank","top = 200 left = 300 width = 100 height = 100"); //open()안에 값은 선택사항 : 새창열기 
+			
+			
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>window객체</h3>
+			클릭하면 새로운 창을 연다 <br>
+			window.onload(url,name,specs)
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+	</body>
+</html>

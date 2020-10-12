@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ebs회원가입 복습</title>
+	</head>
+	<body>
+		<div>
+			<img src = "../img/logo.png" alt ="ebs로고" width = "100px" height = "70px">
+			<span>회원가입</span>
+		</div>
+		<hr><br>
+		<div>
+			<img alt="화살표아이콘" src="../img/icon.png" width = "40px"height ="40px">
+			<span><strong>정보입력 및 본인확인</span>
+		</div>
+		<table border="1" width ="700px" height ="200px" >
+			<tr>
+				<td  style = "background-color :#dcdcde";>아이디</td>
+				<td>
+					<input type ="text"  name ="아이디">
+					<input type = "button" value = "중복확인" onclick ="alert('중복확인되었습니다')">
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>비밀번호</td>
+				<td>
+					<input type ="password"  name ="비밀번호">
+					<br>
+					<span style = color:red>8-12자의 영문대소문자, 숫자, 특수문자만 가능</span>
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>비밀번호확인</td>
+				<td>
+					<input type ="password"  name ="비밀번호확인">
+					<br>
+					<span style = color:red>비밀번호를 다시 확인해주세요.</span>
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>이름</td>
+				<td>
+					<input type ="text"  name ="이름">
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>성별</td>
+				<td>
+					<input type ="radio"  name ="gender" value ="male" >남성
+					<input type ="radio"  name ="gender" value ="female" >여성
+					<input type = "checkbox" name ="이용동의" value = "gendercheck" >
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>생년월일</td>
+				<td>
+					<select name ="년">
+						<option>2020년</option>
+						<option>2025년</option>
+						<option>2030년</option>
+					</select>년
+					<select name ="월">
+						<option>3월</option>
+						<option>5월</option>
+						<option>10월</option>
+					</select>월
+					<select name ="일">
+						<option>10일</option>
+						<option>15일</option>
+						<option>20일<option>
+					</select>일
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>이메일</td>
+				<td>
+				<input type = "text" name ="emailAddress">@<input type ="text" name = "domain">
+				<br>
+				<span style ="color:#9e9ede">아이디나 비밀번호를 찾기위해 사용되오니 정확한 정보로 입력하시기 바랍니다.</span>
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>휴대폰</td>
+				<td>
+				<input type = "text" name ="휴대폰번호">
+				<input type = "checkbox" name ="이용동의" value = "phonecheck">선택정보(휴대폰) 수집 및 이용 동의
+				<br>
+				<span style ="color:#9e9ede">아이디나 비밀번호를 찾기위해 사용되오니 정확한 정보로 입력하시기 바랍니다.</span>
+				</td>
+			</tr>
+			<tr>
+				<td  style = "background-color :#dcdcde";>인증방법</td>
+				<td>
+					<input type ="radio"  name ="check" value ="phone" >휴대폰
+					<input type ="radio"  name ="check" value ="email" >이메일
+					<input type = "button" name ="인증" value = "인증" >
+					<br>
+					<span style ="color:#9e9ede">휴대폰 인증을 위한 인증번호 발송은 1일 최대 3회까지 가능합니다.</span>
+				</td>
+			</tr>
+				<tr>
+				<td  style = "background-color :#dcdcde";>인증방법</td>
+				<td>
+					<input type ="radio"  name ="check" value ="phone" >휴대폰
+					<input type ="radio"  name ="check" value ="email" >이메일
+					<input type = "button" name ="인증" value = "인증" >
+					<br>
+					<span style ="color:#9e9ede">휴대폰 인증을 위한 인증번호 발송은 1일 최대 3회까지 가능합니다.</span>
+				</td>
+			</tr>
+				<tr>
+				<td  style = "background-color :#dcdcde";>인증번호</td>
+				<td>
+					<input type ="text"  name ="인증번호"  >
+					<input type = "button" name ="확인" value = "확인" >
+				</td>
+			</tr>
+			
+		</table>
+		<span>※교사 회원님을 위한 교사인증은 가입 후 회원정보 수정에서 인증하실 수 있습니다</span>
+		<div >
+			<br>
+			<input type = "submit" value = "확인" style = "background-color :#221d5c";">
+		</div>
+		
+	</body>
+</html>

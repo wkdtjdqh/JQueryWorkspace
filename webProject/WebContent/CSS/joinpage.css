@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+fieldset{
+	
+	width : 500px;
+	height: 300px;
+}
+
+
+.box table{
+	text-align : center;
+	border-collapse: collapse;
+	height : 200px;
+	width : 700px;
+	
+	
+}
+	 .box td{
+	margin : 5px;
+}
+
+.box p{
+	
+	text-align: center;
+	
+}
+
+
+.join{
+	
+	margin: auto;
+	width: 600px;
+}
+
+#but{
+	
+	display : inline-block;
+	text-align: center;
+	margin-left: 35%;
+	height: 30px;
+}

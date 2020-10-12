@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location객체</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		function proc1(){
+			
+			res = "href : " + location.href +"<br>";
+			res += "hostname : " + location.hostname + "<br>";
+			res += "port : " + location.port + "<br>";
+			res += "host : " + location.host + "<br>";
+			res += "protocol : " + location.protocol + "<br>";
+			res += "pathname : " + location.pathname + "<br>";
+			
+			document.getElementById('result1').innerHTML = res;
+			
+			
+			
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>location객체</h3>
+			
+			url정보 얻기 <br>
+			href :  <br>
+			hostname :  서버이름(localhost) <br>
+			port : 80(웹의 기본 포트, 나타나지 않는다)
+			host :  hostname + port <br>
+			protocol : <br>
+			pathname :  경로명<br>
+			<input type = "button" value ="확인" onclick ="proc1()">
+			<div id = "result1"></div>
+		</div>
+	</body>
+</html>

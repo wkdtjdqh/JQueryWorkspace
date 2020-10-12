@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>스타일변경</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<style>
+		#test{
+			color : red;
+		
+		}
+		
+		</style>
+		<script>
+		function proc1(){
+			
+			//난수발생
+			vr = Math.floor(Math.random()*256);
+			vg = Math.floor(Math.random()*256);
+			vb = Math.floor(Math.random()*256);
+// 			vr = Math.ceil(Math.random()*256); 소수점이하 올리기
+			
+			
+			vr16 = vr.toString(16);
+			vg16 = vg.toString(16);
+			vb16 = vb.toString(16);
+
+			//id가 test인 요소의 글자색 변경
+			console.log(vr + ',' + vg + ',' + vb );
+			console.log(vr16 +"," +  vg16 +"," + vb16);
+			
+			v1 = document.getElementById('test');
+// 			v1.style.color = 'rgb(' + vr + ',' + vg + ',' + vb + ')';
+			v1.style.color = "#" + vr16 + vg16 + vb16;
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>스타일변경</h3>
+			버튼을 클릭하면 id가 test인 요소의 글자색을 변경<br>
+			v1 = document.getElementById('test')<br>
+			v1 = document.querySelector('#test')<br>
+			v1.style.color ="색상"<br>
+			
+			<input type = "button" value ="확인" onclick ="proc1()">
+			<div id = "result1">
+			
+			<h1 id = "test">Hello~!!!</h1>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>from_data</title>
+	</head>
+	<body>
+		<form action="result.jsp" method ="">
+		<input type = "reset" value ="초기화" style ="cursor: pointer;">
+		<input type = "image" src ="../img/btn.png" width ="70px">
+		
+		<hr>
+		<!-- accept 옵션은 해당하는 파일만 선택할 수 있는 기능이다 -->
+		<input type = "file" acept ="image/jpg">
+		
+		<hr>
+		<textarea rows="10" cols="50"></textarea>
+		
+		<hr>
+		<input type = "url" name = "url">
+		<input type ="email" name ="email">
+		<input type ="tel" name ="tel">
+		<input type ="color" name ="color">
+		<input type ="date" name ="date">
+		<input type ="week" name ="week">
+		<input type ="number" name ="number" min ="1" max = "10" step ="2">
+		<input type ="range" name ="range" min ="1" max = "10">
+		</form>
+		
+		<hr>
+		<fieldset>
+			<legend>인적사항입력</legend>
+			이름 : <input type ="text" name ="name" autocomplete ="off" placeholder = "이름을 작성해주세요"><br>
+			전화번호 : <input type ="text" name ="tel" autofocus value = "010-0000-0000" readonly>
+																												<!-- readonly 텍스트를 고정한다 -->
+																												
+			<hr>
+			<form action=""></form>
+			<input type = "text" pattern ="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required>
+																								<!-- required 반드시 작성하여라 -->
+			<input type ="submit"  value = "확인">
+			</form>
+		</fieldset>
+		
+		<hr>
+		<label for="male">label남성</label><input type = "radio" name = "gender"  value = "male" id= "male">남성
+		<label for ="female">label여성</</label><input type = "radio" name = "gender"  value = "female" id ="female">여성
+		
+	</body>
+</html>

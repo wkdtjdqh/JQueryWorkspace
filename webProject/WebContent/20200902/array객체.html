@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array객체</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<style >
+		
+		.box #result2, .box #result3, .box .dd{
+		border : 1px dotted orange;
+		padding :  50px;
+		margin : 5px;
+		background-color :#e9f5a6;
+	}
+		</style>
+		<script >
+		fruits1 = ["사과","바나나","참외","복숭아","자두","수박"];
+		fruits2 = new Array("파인애플","자몽","레몬","포도","복숭아","메론");
+		fruits3 = new Array();
+		fruits3[0] = "키위";
+		fruits3[1] = "토마토";
+		fruits3[2] = "블루베리";
+		
+		
+		function proc1(){
+			
+			print(fruits1,'result1');
+		
+		}
+		function proc2(){
+			print(fruits2,'result2');
+		
+		}
+		function proc3(){
+			print(fruits3, 'result3')
+		
+		}
+		
+		function print(fr, result){
+			
+			res = "";
+			for(i =0; i < fr.length; i++){
+				res += fr[i] + " ";
+			}
+			document.getElementById(result).innerHTML = res;
+		}
+		//**********************************************************//
+// 		function proc1() {
+			
+// // 			document.querySelector('#result1').innerHTML = fruits1;
+// 			 res ="";
+// 			for(i = 0; i <fruits1.length; i++){
+// 				res += fruits1[i] + "&nbsp;"; 
+// 			}
+// 			document.querySelector('#result1').innerHTML = res;
+			
+// 		}
+// 		function proc2() {
+// 			 res ="";
+// 			for(i = 0; i <fruits2.length; i++){
+// 				res += fruits2[i] + "&nbsp;"; 
+// 			}
+// 			document.querySelector('#result1').innerHTML = res;
+			
+// 		}
+// 		function proc3() {
+			
+// 			 res ="";
+// 			for(i = 0; i <fruits3.length; i++){
+// 				res += fruits3[i] + "&nbsp;"; 
+// 			}
+// 			document.querySelector('#result1').innerHTML = res;
+// 		}
+		
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>Array객체</h3>
+			fruits1 = ["","","","","",""]
+			fruits = new Array("","","","","","")
+			fruits = new Array()
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<input type = "button" value ="확인" onclick = "proc2()">
+			<input type = "button" value ="확인" onclick = "proc3()">
+			<div id = "result1"></div>
+			<div id = "result2"></div>
+			<div id = "result3"></div>
+		</div>
+	</body>
+</html>

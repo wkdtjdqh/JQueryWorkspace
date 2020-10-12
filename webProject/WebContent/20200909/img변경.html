@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>스위치 이미지 변경</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		function proc1(){
+			
+			vimg = document.querySelector('img');
+			
+// 			alert(vimg.src);
+
+			vsrc = vimg.src;
+			ㅜ
+			if(vsrc.match("on") == null){ //off인 상태 on으로 변경
+				vimg.src = '../img/sw_on.png';
+			}else{//on상태 - off로 변경
+				vimg.src = '../img/sw_off.png';
+				
+			}
+			
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>이미지 변경</h3>
+			src의 속성값을 바꾼다<br>
+			match()를 이용한다 -검색하고자 하는 해당 문자열이 있는지 없는지 비교<br>
+			있으면 배열로 리턴 없으면 null을 리턴한다<br>
+			if(vsrc.match("on") == null){src의 값이 on로 변경한다}<br>
+			else{src = off로 변경}<br>
+			<img alt="sw_on" src="../img/sw_on.png" onclick = "proc1()">
+		</div>
+	</body>
+</html>

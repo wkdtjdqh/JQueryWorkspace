@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getTime</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+	</head>
+	
+	<script>
+		now = new Date();
+		
+		window.onload = function(){
+			
+			outres = document.querySelector('#result2');
+		}
+	
+	function proc1(){
+	
+// 		myday = new Date(1995,10-1,23);
+		myday = new Date("1995.10.23");
+		
+		
+		//두 날짜 사이의 간격을 구한다
+		n = now.getTime();
+		
+		m = myday.getTime();
+		
+		mi = n -m;
+		
+		
+		res = "태어난 날 : " + myday.toLocaleDateString() + "<br>";
+		res += "경과 초 : " + mi / 1000 + "<br>";
+		res += "경과 분 : " + mi / 1000/60 + "<br>";
+		res += "경과 시간 : " + mi / 1000/60/60 + "<br>";
+		res += "경과 일 : " + mi / 1000/60/60/24 + "<br>";
+		res += "경과 년 : " + mi / 1000/60/60/24/365 + "<br>";
+		
+		
+		document.querySelector('#result1').innerHTML = res;	
+		
+	}
+	
+	function proc2(){
+		
+		
+		 invalue = document.getElementById('inday').value;
+		 
+		 
+		invalue = new Date(invalue);
+		
+		res = "구입날짜 : " + invalue.toLocaleDateString()+ "<br>";
+		res += "오늘 날짜 : " + now.toLocaleDateString() + "<br>";
+		times = now.getTime() - invalue.getTime();
+		
+		days = times / 1000/60/60/24;
+		
+		if(days < 0){
+			alert("선택오류입니다");
+			outres.innerHTML = "";	
+			return false;
+		}
+		 if(days <= 7){
+			res += "교환 반품이 가능합니다 <br>"
+			
+			
+		}else{
+			res += "교환 반품이 불가능 합니다<br>"
+		}
+		
+		
+		outres.innerHTML = res;	
+		
+		
+	}
+	
+	
+	</script>
+	<body>
+		
+		<div class ="box">
+			<h3>경과일 구하기</h3>
+			getTime() : millisec의 값으로 리턴된다<br>
+			초 구하기 : millisec의 값 /1000<br>
+			분 구하기 : millisec의 값 /1000/60<br>
+			시간 구하기 : millisec의 값 /1000/60/60<br>
+			일 구하기 : millisec의 값 /1000/60/60/24<br>
+			년 구하기 : millisec의 값 /1000/60/60/24/365<br>
+			
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>경과일 구하기</h3>
+			구입날짜 : <input type ="date" id = "inday">
+			<input type = "button" value ="확인" onclick = "proc2()">
+			<div id = "result2"></div>
+			
+		</div>
+	</body>
+</html>

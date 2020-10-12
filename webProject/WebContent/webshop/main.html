@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>main</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap')
+			;
+		header, nav, #left, #right, section, footer{
+			
+/* 			border : 2px solid #F7AA97; */
+			margin : 0.5%;
+			padding:  10px;
+			
+		}
+		
+		nav{
+		border : 1px solid #F3D9B5;
+/* 		background: #F0B791; */
+		
+		width : 1865px;
+		}
+		header{
+		background-color : #F3D9B5;
+		border : 1px, solid #F7AA97;
+		 text-align: center;
+		 font-size : 1.5em;
+		 color : #b57150;
+			
+			font-weight : 800;
+			font-family: 'Lato', sans-serif;
+			
+		}
+		
+		 
+		header h2{
+		display : inline-block;
+		
+		}
+		
+		
+		#left{
+		
+		width : calc(15% - 1%);
+		height : 600px;
+		float: left;
+		
+		border-bottom-color: #CFAA9E;
+		
+		}
+		.category{
+		padding-inline-start: 0px;
+		margin-block-start: 2.1em;
+
+		}
+		ul.category li{
+		
+		background: #F0B791; 
+		font-family :'Gothic A1', sans-serif;
+		font-weight : 700;
+		font-style-color: #DC8962;
+		list-style-type: none;
+		border-bottom: 2px solid white;
+		 margin-bottom: 5px;
+		padding: 17px 30px;
+		font-size: large;
+		height: 35px;
+
+		
+		
+		}
+		#right{
+		width : calc(15% - 1%);
+		height : 600px;
+		float: right;
+		
+		}
+		section{
+		
+		float: left;
+		
+		width : calc(66% - 1%);
+		height : 600px;
+		}
+		
+		footer{
+		clear : both;
+		background-color : #F3D9B5;
+		border : 1px, solid #F7AA97;
+		 text-align: center;
+		 font-size : 1.2em;
+		 color : #b57150;
+			
+			font-weight : 500;
+			font-family: 'Lato', sans-serif;
+		
+		
+		}
+		nav ul{
+		text-align : center;
+		
+		list-style-type: none;
+		letter-spacing: 20px;
+		}
+		nav ul li{
+			color : #b57150;
+			font-size :1em;
+			font-weight : 800;
+			font-family: 'Lato', sans-serif;
+			display : inline-block;
+			margin : 20px 50px;
+			
+		}
+		#box2{
+			width : 1905px;
+			height:auto;
+		
+		}
+		
+		 a:link { color: #b57150; text-decoration: none;}
+		 a:visited { color: #b57150; text-decoration: none;}
+		 a:hover { color: white; text-decoration: underline;}
+
+		#shopcart h2{
+		background-color : #F0B791;
+		font-size : 2em;
+			font-weight : 800;
+			font-family: 'Lato', sans-serif;
+			color : #a16345;
+	
+		}
+		#shopcart p{
+			border: 2px dotted #F0B791;
+	    height: 150px;
+	    margin: auto;
+	    text-align: center;
+		}
+		#login fieldset{
+		background-color : #F0B791;
+		border : 1px solid white;
+			font-family: 'Lato', sans-serif;
+			color : #a16345;
+			
+    height: 250px;
+	
+		}
+		#login legend{
+		font-size: 2em;
+		font-family: 'Lato', sans-serif;
+			color : #a16345;
+			font-weight: 800;
+
+		}
+		#login #name{
+			border: 2px solid #F0B791;
+			height: 25px;
+	  
+		}
+		#login #pwd{
+			border : 2px solid #F0B791;
+			height: 25px;
+	  
+		}
+		#login  p{
+		font-family :'Gothic A1', sans-serif;
+		font-weight : 500;
+			color : #a16345;
+		
+		}
+		#loginbt{
+		background-color: #E1CBC6;
+	
+		font-family :'Gothic A1', sans-serif;
+		font-weight : 700;
+		color : #6e524c;
+		border: hidden;
+		 height: 30px;
+		}
+		
+		#reset{
+		background-color: #E1CBC6;
+	
+		font-family :'Gothic A1', sans-serif;
+		font-weight : 700;
+		color : #6e524c;
+		border: hidden;
+		 height: 30px;
+		}
+	
+		</style>
+	</head>
+	<body>
+		<header>
+		<div class = "main">
+		
+			<div>
+			<img src = "../img/쇼핑백.jpg" width = "90px;" style ="vertical-align: middle;">
+			<h2>Web Shopping</h2>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li>HOME</li>
+				<li>SHOPPING ABOUT</li>
+				<li>NEWS</li>
+				<li>MY ACOUNT</li>
+				<li>CONTACTS</li>
+			</ul>
+		</nav>
+		<div id = "box2">
+		<aside id ="left">
+			<div>
+				<ul class = "category">
+					<li><a href = "../webshop/computer.html" target = "ifr">컴퓨터</a></li>
+					<li><a href = "../webshop/clothing.html" target = "ifr">의류</a></li>
+					<li><a href = "../webshop/음악.html" target = "ifr">음악</a></li>
+					<li><a href = "../webshop/영화.html" target = "ifr">영화</a></li>
+					<li><a href = "../webshop/스포츠,레저.html" target = "ifr">스포츠/레저</a></li>
+					<li><a href = "../webshop/가구,인테리어.html" target = "ifr">가구/인테리어</a></li>
+					<li><a href = "../webshop/식품.html" target = "ifr">식품</a></li>
+				</ul>
+			</div>
+		
+		</aside>
+		<section>
+		
+		<article id ="article"></article>
+		<iframe src = "computer.html" name="ifr" width = "1240px;" height = "580px" style ="border :0px;"></iframe>
+		</section>
+		<aside id = "right">
+			<div id = "shopcart">
+				<h2>Shopping Cart</h2>
+				<br>
+				<p>현재 쇼핑카트에 물품이 없습니다</p>
+				<a href = "">쇼핑카트보기</a>
+			</div>
+			<div id = "login">
+<!-- 				<h4>Log in</h4> -->
+				<form action = "">
+				<fieldset>
+				<legend>Log in</legend>
+					<p>아이디 :</p><input type = "text" name = "ID" id ="name"><br>
+					<p>비밀번호 :</p> <input type = "text" name = "pwd" id ="pwd"><br>
+					<input type = "submit" id = "loginbt" value ="로그인">
+					<input type = "reset" id = "reset" value ="초기화"><br>
+				</fieldset>
+					<div>
+					
+					<a href = "../webshop/joinpage.html" target = "ifr">회원가입</a><!--formdata  target ="_blank"-->
+					<a href = "">비밀번호분실</a>
+					</div>
+				
+				</form>
+				
+			</div>
+		</aside>
+		</div>
+		<footer>WebShopping 2020 Une</footer>
+		
+		</div>
+	</body>
+</html>

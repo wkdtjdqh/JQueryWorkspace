@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>인라인 블럭</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<style >
+		span{
+		
+			background : #f0f0b6;
+			display : inline-block;
+			width:  50%;
+			height : 100px;
+			/*span은 inline 태그 이기 때문에 width와 height가 적용되지 않는다 ==>display : block을 사용 */
+	
+		
+		}
+		p{
+			background: #b4ede4;
+			width:  50%;
+			height : 60px;
+		
+		}
+		.box #result1{
+		
+			display : none;
+		}
+		
+		</style>
+		<script>
+		
+		window.onload = function(){
+			//id가 result1인 요소를 검색
+			res1 = document.getElementById("result1");
+			//res 1 = document.querySelector('#result1');
+			
+			//span태그와 p태그를 검색
+			vsp = document.getElementsByTagName("span");
+			//getElementsByTagName,SelectorAll 을 쓸 경우 
+			//결과 vsp는 배열이라서 선언할 때 인데스 번호를 입력해줘야 한다 ==>vsp[0].style.display
+			
+			//vsp = document.querySelector('span');
+			
+			vp = document.getElementsByTagName("p");
+			//vp = document.querySelector('p');
+			
+			//res,vsp,vp는 전역변수 스크립트에서는 자료형 타입을 쓰지 않는다 <==> 앞에 var res,vsp,vp하면 지역변수
+		
+		}
+		function proc1(){
+			res1.style.display = 'block';
+			
+			vsp[0].style.display = 'none';
+			
+			vp[0].style.display = 'none';
+			
+		}
+		function proc2(){
+			res1.style.display = 'none';
+			
+			vsp[0].style.display = 'inline';
+			
+			vp[0].style.display = 'block';
+			
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>display</h3>
+			display : none<br>
+			display : block<br>
+			display : inline<br>
+			display : inline-block(줄이 안바뀌면서 크기조절 가능)<br>
+			확인버튼 클릭하면 div id = result1인 요소를 보이게 하고
+			span p 태그는 안보이게 한다<br>
+			<input type = "button" value ="확인" onclick="proc1()">
+			<input type = "button" value ="확인" onclick="proc2()">
+			<span>무궁화 꽃이 피었습니다</span>
+			<p>무궁화 꽃이 피었습니다</p>
+			<div id = "result1"></div>
+		</div>
+	</body>
+</html>

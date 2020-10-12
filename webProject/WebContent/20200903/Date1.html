@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Date객체</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		function proc1(){
+			
+			n1 = new Date();
+			n2 = new Date(2000,03,12);
+			n3 = new Date("2000.03.12");
+			n4 = new Date(1000000);	
+		
+			print('result1',n1, "new Date()");
+			print('result2',n2, "new Date(2000,03,12)");
+			print('result3',n3, "new Date('2000.03.12')");
+			print('result4',n4, "new Date(1000000)");
+			
+		}
+		
+		function print(out, n, str){
+			
+			res1 =  document.getElementById(out);
+			
+			res = n + " <br>";
+			res += str + " <br>";
+			res += "toLocaleString : " + n.toLocaleString() + "<br>";
+			res += "toLocaleString : " + n.toLocaleDateString() + "<br>";
+			res += "toLocaleString : " + n.toLocaleTimeString() + "<br>";
+			
+			
+			res1.innerHTML = res; 
+			
+		}
+		
+		</script>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>Date객체</h3>
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+			<div id = "result2"></div>
+			<div id = "result3"></div>
+			<div id = "result4"></div>
+		</div>
+	</body>
+</html>

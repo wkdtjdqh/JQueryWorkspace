@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>스트링 객체</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		
+		str = "우리나라 좋은 나라 대한 민국 만세";
+		
+		function proc1() {
+			
+			idx = str.length-1;
+			inx = prompt("인덱스를 입력하세요","0~" + idx);
+			
+			
+			if(inx > idx){
+				alert("인덱스 범위를 넘었습니다");
+			document.querySelector('#result1').innerHTML = "";
+				
+				return false;
+			}
+			inxA = str.charAt(inx);
+			
+			
+			
+			document.querySelector('#result1').innerHTML = inxA;
+			
+		}
+		
+			function proc2() {
+
+				slicestr = str.slice(5, 10); //5~9까지
+				document.querySelector('#result2').innerHTML = "str.slice(5, 10) : "
+						+ slicestr + "<br>";
+
+			}
+			function proc3() {
+
+				subsr = str.substring(11, 16); //11~15까지
+				
+				document.querySelector('#result3').innerHTML = 
+					"str.substring(11, 16) : " + subsr + "<br>";
+
+			}
+			function proc4() {
+
+				substr = str.substr(11, 5) //11번째부터 5글자
+				
+				document.querySelector('#result4').innerHTML = 
+					"str.substr(11, 5) : " + substr + "<br>";
+
+			}
+			function proc5() {
+
+				search = prompt("찾는 문자열 입력");
+				
+				idx =0;
+				//나라 문자를 모두 검색하여 인덱스를 구한다 
+				res = "찾는 문자열 : " + search + "<br>";
+				
+				flag = true;
+				
+				
+				while(true){
+					
+					idx = str.indexOf(search, idx);
+					
+					if(idx == -1){
+						break;
+						
+					}
+					res += idx + " ";
+					idx += search.length;
+					flag = false;
+					
+					
+				}
+			
+				document.querySelector('#result5').innerHTML = res;
+					
+			}
+			
+			function proc6(){
+				//공백을 기준으로 문자열을 분리한다
+
+				ss = str.split(" "); 
+				res = "";
+				for(i= 0; i<ss.length; i++){
+					res += i + "번째 : " + ss[i] + "<br>";
+					
+				}
+				document.querySelector('#result6').innerHTML = res;
+			}
+			function proc7(){
+				//문자열에서 앞뒤 공백을 제거한다
+				
+				
+				idval = document.querySelector("#id").value;
+				nmval = document.querySelector("#name").value;
+				
+// 				res = "입력 한 값 : " + idval + "," + idval.length + "<br>";
+// 				idval = idval.trim();
+// 				res += "공백제거 : " + idval.length + "<br>";
+
+				idleng = idval.trim();
+				
+				if(idleng.length < 5 || idleng.length > 10){
+					//입력한 값이 5~10사이로 한다
+				alert("5~10사이로 입력하세요");
+				document.querySelector('#result7').innerHTML = "";
+					return false;
+				
+				}else{
+					
+					res = idleng + "님 환영합니다<br>";
+				}
+				
+				nmleng = nmval.trim();
+				if(nmleng.length < 5 || nmleng.length > 10){
+					alert("5~10사이로 입력하세요");
+					return false;
+				}else{
+					res += nmleng + "님 즐거운 하루 되세요"
+				}
+				
+			
+				document.querySelector('#result7').innerHTML = res;
+				
+				
+				
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>객체</h3>
+			str = "우리나라 좋은 나라 대한 민국 만세"
+			charAt(index)<br>
+			slice(start,end)<br>
+			substring(start,end)<br>
+			substr(start,length)<br>
+			
+			<input type = "button" value ="charAt" onclick ="proc1()">
+			<input type = "button" value ="slice" onclick ="proc2()">
+			<input type = "button" value ="substring" onclick ="proc3()">
+			<input type = "button" value ="substr" onclick ="proc4()">
+			
+			<div id = "result1"></div>
+			<div id = "result2"></div>
+			<div id = "result3"></div>
+			<div id = "result4"></div>
+		</div>
+		<div class ="box">
+			<h3>객체</h3>
+			str = "우리나라 좋은 나라 대한 민국 만세"
+			indexOf(index)<br>
+			나라 문자를 모두 검색하여 인덱스를 구한다<br>
+			<input type = "button" value ="indexOf" onclick ="proc5()">
+			<div id = "result5"></div>
+			
+		</div>
+		<div class ="box">
+			<h3>splite</h3>
+			splite("구분자",limit) : 한 문자열에서 구분자를 기준으로<br>
+			문자열을 분리하여 배열을 생성한다<br>
+			limit : 구분되는 문자의 갯수 <br>
+			str문자열에서 공백을 기준으로 분리하여 배열로 저장<br>
+			ss = str.split(" ")<br>
+			<input type = "button" value ="splite" onclick ="proc6()">
+			<div id = "result6"></div>
+		</div>
+		<div class ="box">
+			<h3>Trim</h3>
+			trim() : 문자열에서 앞뒤 공백 제거<br>
+			아이디 : <input type = "text" id ="id"><br>
+			이름 : <input type = "text" id ="name"><br>
+			<input type = "button" value ="Trim" onclick ="proc7()">
+			<div id = "result7"></div>
+		</div>
+	</body>
+</html>

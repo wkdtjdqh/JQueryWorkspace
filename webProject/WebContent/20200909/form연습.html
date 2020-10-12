@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>가위바위보-이미지변경</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+
+ 		<style>
+	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap') */ */
+			; 
+			
+	.box #startbt{ 
+			
+		margin : auto; 
+				
+			} 
+			
+		.box span{
+			text-align: middle; 
+			
+			font-family: 'Lato', sans-serif; 
+			
+  			}  
+			
+  			.box img{  
+			
+  			width: 200px;  
+  			height: 200px;  
+  			}  
+			
+  			td{  
+  			text-align: center;  
+  			width: 400px;  
+			
+			
+  			}  
+			
+			
+  			#person{  
+			
+  			background-color: #ddf542;  
+  			height: 20px;  
+  			}  
+  			#computer{  
+			
+  			background-color: #b8bcf5;  
+  				height: 20px;  
+  			}  
+			
+			
+  		#q1{  
+  		width: 20px;  
+  		height: 20px;  
+		
+  		}  
+		
+		
+	</style> 
+		
+		<script>
+		
+		window.onload = function(){
+			select = document.querySelector('#sel');
+			
+		}
+		function proc1() {
+			
+			com = ["가위","바위","보"];
+			ran = Math.floor(Math.random()*com.length);
+			
+			computer = com[ran];
+			
+			//user입력
+			
+			user = prompt("가위, 바위, 보를 입력 하세요");
+			
+			//비교
+			res ="";
+			if(user == computer){
+				res += "결과 : 비겼습니다";
+			}else if(user == "가위" && computer == "보" 
+				|| user =="바위" && computer == "가위"
+					|| user =="보" && computer == "바위"){
+				
+				res += "결과 : 사용자가 이겼습니다";
+			}else{
+				
+				
+				res += "결과 : 컴퓨터가 이겼습니다";
+			}
+			
+			
+			//결과 출력
+			document.querySelector('#result1').innerHTML += res;
+			
+			//이미지 변경
+			icom = document.querySelector('#right');
+			icom.src = "../img/" +computer + "_우.PNG";
+			
+			
+			iuser = document.querySelector('#left');
+			iuser.src = "../img/" + user + "_좌.PNG";
+		}
+		function inputBox() {
+			
+			input = document.querySelector('#q1');
+			
+			inVal = input.value.trim();
+			
+			res = inVal + "단"+ "\n";
+		
+			for(i =1; i< 10; i++){
+			 	res += inVal + "*" + i + "=" + (inVal*i) + "\n";
+			}
+			
+// 			document.querySelector('#textArea').innerHTML = res;
+			area = document.querySelector('#textArea');
+			area.value = res;
+
+// 			text = document.createTextNode(num);
+// 			ptag = document.createElement("p");
+// 			ptag.value = inVal;
+// 			ptag.text = inVal;
+// 			document.querySelector('#textArea').appendChild(ptag);
+			
+// 			input.value ="";
+// 			input.focus();
+			
+// 			out.appendchild(ptag);
+
+			
+			
+// 			ptag.appendChild(text);
+// 			out = document.querySelector('#textArea');
+			
+		}
+		function inner() {
+			
+			number = select.selectedIndex;
+			
+			numVal = select.options[number].value;
+			
+			
+			res = numVal + "단" + "<br>";
+			
+			
+			document.querySelector('#divInfo').innerHTML = res;
+			
+			for(i =1; i< 10; i++){
+			 	res += numVal + "*" + i + "=" + (numVal*i) + "<br>";
+			}
+			
+			
+			document.querySelector('#divInfo').innerHTML = res;
+			
+		}
+		
+		function q2(){
+			
+			
+			nmInput = document.querySelector('#nm');
+			
+			nmVal = nmInput.value.trim();
+			
+			
+			gender = document.querySelectorAll("input[name=gender]");
+		
+			for(i =0; i<gender.length; i++){
+				if(gender[i].checked){
+					ginput = gender[i].value + " ";
+				}
+			}
+			
+		
+			hobby = document.querySelectorAll('input[name=취미]');
+			hinput = "취미는 ";
+			hash = false;
+
+			
+			for(i =1; i<hobby.length; i++){
+				if(hobby[i].checked){
+					
+					hinput += hobby[i].value + "";
+					hash = true;
+
+				}
+			}
+			
+			if(!hash){
+				hinput = "당신은 취미가 없군요"
+			}else{
+				hinput += "이군요!"
+			}
+			res =  nmVal + "씨!\n" + "당신은 " + ginput + "이고,\n" + "취미는 " + hinput + "고요!\n" ;
+			
+			area = document.querySelector('#textArea2');
+			area.value += res;
+			
+			
+			
+// 			text = document.createTextNode(res);
+// 			area.appendCild(text);
+			
+
+			
+			
+		}
+		</script>
+	</head>
+	
+	<body>
+
+	<div class="box">
+		<h3>가위바위보</h3>
+		<table>
+			<tr>
+				<th colspan="2"><input type="button" value="게임시작" id="startbt"
+					onclick="proc1()""><br>
+				<br>
+				<br></th>
+			</tr>
+			<tr>
+				<td id="person"><span>사용자</span></td>
+				<td id="computer"><span>컴퓨터</span></td>
+			</tr>
+			<tr>
+				<td><img alt="" src="../img/바위_좌.PNG" onclick="imgLeft()"
+					id="left"></td>
+				<td><img alt="" src="../img/바위_우.PNG" onclick="imgRight()"
+					id="right"></td>
+			</tr>
+			<tr>
+				<td id="result1" colspan="2"></td>
+			</tr>
+
+
+
+		</table>
+
+
+	</div>
+	
+	
+		<div class="box">
+			<h3>문제 1 - 구구단</h3>
+			<input type ="text" value = "" id ="q1"> 단 <input type="button" value="출력" onclick ="inputBox()"><br>
+			<textarea rows="20" cols="50" id = "textArea"></textarea>
+	
+	
+		</div>
+		<div class="box">
+			<h3>문제2</h3>
+			이름 : <input type ="text" id="nm" name = "name"><br><br>
+			성별 :
+			 <input type ="radio" name = "gender"  value = "남성">남
+			 <input type ="radio" name = "gender"  value = "여성">여<br><br>
+			취미 : 
+			<input type ="checkbox" name ="취미" value ="여행">여행
+			<input type ="checkbox" name ="취미" value ="독서">독서
+			<input type ="checkbox" name ="취미" value ="영화감상">영화감상
+			<input type ="checkbox" name ="취미" value ="바둑">바둑
+			<input type ="checkbox" name ="취미" value ="장기">장기
+			<input type ="checkbox" name ="취미" value ="등산">등산
+			<input type ="checkbox" name ="취미" value ="낚시">낚시<br><br>
+			<input type = "button" value="결과출력" onclick = "q2()"><br>
+			<textarea rows="20" cols="100"id = "textArea2">
+			</textarea>
+
+
+		</div>
+		</div>
+		<div class="box">
+			<h3>문제 4 - 구구단</h3> <!-- selectoption value -->
+			<select id = "sel">
+						<option value="2">2단</option>
+						<option value="3">3단</option>
+						<option value="4">4단</option>
+						<option value="5">5단</option>
+						<option value="6">6단</option>
+						<option value="7">7단</option>
+						<option value="8">8단</option>
+						<option value="9">9단</option>
+					
+			</select>
+			<input type ="button" value="출력" onclick = "inner()">
+			<h1>결과출력</h1>
+			<div id = "divInfo"></div>
+		
+		</div>
+</body>
+</html>

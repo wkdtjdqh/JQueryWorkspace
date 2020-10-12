@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>객체정의2</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		var Circle = {
+				
+				
+		};
+		
+		
+		function proc1(){
+			
+			Circle.rad = 6;
+			Circle.getArea = function(){
+				
+				return Math.pow(this.rad, 2) * Math.PI;
+				
+			};
+			Circle.getCircum = function(){
+				
+				return 2 * Math.PI *this.rad;
+			};
+				
+			
+			res = "반지름 : " + Circle.rad + "<br>";
+			res += "면적 : " + Circle.getArea() + "<br>";
+			res += "둘레 : " + Circle.getCircum() + "<br>";
+			
+			document.querySelector('#result1').innerHTML = res;
+			
+
+			
+		}
+		
+		
+		function Rect(width,height){
+			
+			
+			this.width = width;
+			this.height = height;
+			
+			this.getArea = function(){
+				
+				return this.width * this.height;
+				
+			};
+			this.getCircum = function(){
+				return (this.width + this.height)*2;
+			};
+			
+		};
+		
+		function proc2(){
+			
+			var res = new Rect(5,10);
+			
+			r = "가로 : " + res.width + "<br>";
+			r += "세로 : " + res.height + "<br>";
+			r += "넓이 : " + res.getArea() + "<br>";
+			r += "둘레 : " + res.getCircum() + "<br>";
+			
+			
+			document.querySelector('#result2').innerHTML = r;
+			
+			
+		}
+		
+		
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>리터럴로 객체 정의</h3>
+			Circle
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>생성자로  객체 정의</h3>
+			Rect<br>
+			<input type = "button" value ="확인" onclick = "proc2()">
+			<div id = "result2"></div>
+		</div>
+	</body>
+</html>

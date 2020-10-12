@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>객체정의</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		
+		//객체 정의- 속성메소드가 없다 - 동적으로 추가 가능
+		
+		var Rect = {};
+		
+		
+		//속성 - width, height 메소드 - 면적 구하기 둘레 구하기 
+		
+// 			var Rect = {
+
+// 				width : 20,
+// 				height : 5,
+// 				getArea : function() {
+
+// 					return this.width * this.height;
+// 				},
+// 				getCircum : function() {
+
+// 					return (this.width + this.height) * 2;
+// 				}
+
+// 			};
+
+			function proc1() {
+				
+				//Rect객체의 가로, 세로, 면적, 둘레 정보를 출력한다
+// 				res = "가로 : " + Rect.width + "<br>";
+// 				res += "세로 : " + Rect.height + "<br>";
+// 				res += "면적 : " + Rect.getArea() + "<br>";
+// 				res += "둘레 : " + Rect.getCircum() + "<br>";
+				
+// 				Rect.name = "네모";
+// 				res += "이름 : " + Rect.name + "<br>";
+				
+// 				document.querySelector('#result1').innerHTML = res;
+
+
+				//Rect객체에 아무것도 선언되지 않아도 동적으로 추가 할 수 있다
+				Rect.width = 7;
+				Rect.height = 5;
+				Rect.getArea = function(){
+					return this.width * this.height;
+				}
+				
+// 				Rect.getCircum = function(){
+// 					return (this.width + this.height) *2;
+// 				}
+				
+				res = "가로 : " + Rect.width + "<br>";
+				res += "세로 : " + Rect.height + "<br>";
+				res += "면적 : " + Rect.getArea() + "<br>";
+				document.querySelector('#result1').innerHTML = res;
+				
+				
+			
+	
+			}
+			
+			//객체 정의
+			function Circle(rad){
+				
+				this.rad = rad;
+					
+				
+				this.getArea = function(){
+					//면적 = 3.14 * rad
+					
+					return Math.PI * Math.pow(this.rad ,2);
+				};
+				
+				
+				
+				this.getCircum = function(){
+					
+				//2 * 3.14 * rad
+				
+				return 2 * Math.PI * this.rad;
+					
+				};
+			};
+			
+			
+			
+			function proc2(){
+				
+				var cir = new Circle(4);
+				cir.name = "동그라미"; //동적으로 name속성을 추가
+				res = "반지름 : " + cir.rad + "<br>";
+				res += "이름 : " + cir.name + "<br>";
+				res += "면적 : " + cir.getArea() + "<br>";
+				res =+ "둘레  : " + cir.getCircum() + "<br>"
+				
+				document.querySelector('#result2').innerHTML = res;
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+
+		<div class="box">
+				<h3>객체정의 - Literal에 의한 정의</h3>
+				객체 정의<br>
+				1. 속성 - width, height 메소드 - 면적 구하기 둘레 구하기로 정의하는 객체 <br>
+				2. 속성과 메서드 없이 객체의 형태(껍데기)만 정의하는 객체 var Rect ={ }<br> 
+					-> 나중에 필요시 동적으로 추가해서 사용 할 수 있다.
+				<input type="button" value="확인" onclick="proc1()">
+				<div id="result1"></div>
+		</div>
+		<div class="box">
+				<h3>생성자정의 - 생성자에 의한 정의</h3>
+				객체 정의 : function  Rect(rad)<br>
+				1. 속성 - width, height 메소드 - 면적 구하기 둘레 구하기로 정의하는 객체 <br>
+						->  나중에 필요시 동적으로 추가해서 사용 할 수 있다.
+						-> new Rect(23)
+				<input type="button" value="확인" onclick="proc2()" >
+				<div id="result2"></div>
+		</div>
+</body>
+</html>

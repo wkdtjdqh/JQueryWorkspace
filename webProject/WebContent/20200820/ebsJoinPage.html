@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입페이지</title>
+		<style>
+				input[type=text],input[type =password]{width:400px;height:20px;}
+				td:first-child{text-align:center; font-weight:bold;}
+				input[type =button]{border: 1px solid #3d7cc3;color: #3d7cc3;background: #FFF; font-size: 16px;}
+				input[type=submit]{color: #FFF;background: #042f6c; border: 1px solid #042f6c; font-size: 20px;}
+				table{border-collapse: collapse;}
+				p{color:#A500CF; font-size:10pt;}
+		</style>
+	</head>
+	<body>
+	<div style ="width: 700px; margin: 0 auto;" >
+		<div>
+			<img alt="로고이미지"  src ="../img/logo.png" width ="150px" style ="vertical-align: middle;" > 
+			<span style = "vertical-align: middle">회원가입</span>
+		</div>
+		<hr style = "border:1px solid  #323633;">
+		<br>
+		<div>
+			<img alt ="아이콘"  src ="../img/icon.png" width ="10px">
+			<strong>정보입력 및 본인확인</strong></div>
+		<br>
+		<form action ="../20200821/result.jsp"  method ="post">
+		<table border="1" width = "700px" height ="500px">
+			<tr>
+				<td width ="130px">아이디</td>
+				<td><input type ="text" name ="id"><input type = "button" value = "중복확인" onclick ="alert('중복확인되었습니다')"></td>
+			</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type = "password" name = "pwd"></td>
+		</tr>
+		<tr>
+			<td>비밀번호 확인</td>
+			<td><input type = "password" name = "pwdcheck"></td>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td><input type = "text" name ="name"></td>
+		</tr>
+		<tr>
+		<td>성별</td>
+			<td>
+					<input type ="radio" name ="gender" value = "male" >남성
+					<input type ="radio" name ="gender" value = "female">여성
+					<input  type ="checkbox" name ="이용동의" value = "usercheck">선택정보(성별) 수집 및 이용 동의</td>
+		</tr>
+		<tr>
+			<td>생년월일</td>
+			<td>
+				<select name ="year">
+					<option>2020년</option>
+					<option>2015년</option>
+					<option>2010년</option>
+				</select>년
+				<select name ="month">
+					<option>1월</option>
+					<option>8월</option>
+					<option>10월</option>
+				</select>월
+				<select name ="day">
+					<option>1일</option>
+					<option>20일</option>
+					<option>23일</option>
+				</select>일
+				</td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td>
+				<input type = "text" name ="emailAddress" style = "width:200px"> @<input type = "text" name ="domain" style = "width:200px">	
+				<br>
+				<p>아이디나 비밀번호를 찾기위해 사용되오니 정확한 정보로 입력하시기 바랍니다.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>휴대폰</td>
+			<td>
+				<input type = "text" name = "phoneNm" >	
+				<input  type ="checkbox" name ="이용동의" value = "usercheck">선택정보(성별) 수집 및 이용 동의
+				<br>
+				<p>아이디나 비밀번호를 찾기위해 사용되오니 정확한 정보로 입력하시기 바랍니다.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>인증방법</td>
+				<td>
+					<input type = "radio" name = "Cer" value ="phone" >휴대폰
+					<input type = "radio" name = "Cer" value ="email" >이메일
+					<input type = "button" value = "인증">
+				<br>
+				<p>휴대폰 인증을 위한 인증번호 발송은 1일 최대 3회까지 가능합니다.</p>
+				</td>
+		</tr>
+		<tr>
+			<td>인증번호</td>
+				<td>
+					<input type ="text" name ="CerNm">
+					<input type ="button" value = "인증">
+				</td>
+		</tr>
+		</table>
+		<br>
+		※ 교사 회원님을 위한 교사인증은 가입 후 회원정보 수정에서 인증하실 수 있습니다.
+		</div>
+		<div style = "text-align: center;">
+			<br>
+			<input type ="submit" value = "확인">
+		</div>
+		</form>
+		
+	</body>
+</html>

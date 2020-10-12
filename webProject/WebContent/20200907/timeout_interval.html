@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>timeout,interval</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		
+		function proc1(){
+			
+			
+			
+			
+			dres1 = document.querySelector('#result1');
+			
+			setTimeout(function(){
+				dres1.style.background = '#d6b2d4';
+				},1000);
+			
+			
+			
+			
+			
+		}
+		
+		function proc2(){
+			
+			
+			start = document.getElementById('start');
+			start.style.display = "none";
+			
+			
+// 			dres2 = document.querySelector('#result2');
+			dres2 = document.body;
+			
+			a = setInterval(function() {
+			
+			cr = Math.floor(Math.random()*255);
+			cg = Math.floor(Math.random()*255);
+			cb = Math.floor(Math.random()*255);
+			
+			
+			
+			cr = cr.toString(16);
+			cg = cg.toString(16);
+			cb = cb.toString(16);
+
+// 				dres2.style.background = 'rgb(' + cr + ',' + cg + ',' + cb + ')';
+// 			}, 1000);
+			
+			dres2.style.background = '#' + cr+ cg + cb;  //16진수로 변환한디
+		}, 1000);
+			
+			
+		}
+		
+		function proc3(){
+			
+			
+			clearInterval(a);
+			start.style.display = "inline";
+		}
+		
+		function changecolor(){
+			
+			
+			document.querySelector('#result2').style.background = 'red';
+		}
+		</script>
+		
+		<style>
+		
+	
+	
+		</style>
+	</head>
+	<body onload ="changecolor()">
+		
+		<div class ="box">
+			<h3>setTimeOut</h3>
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+		<div class ="box">
+			<h3>setInterval</h3>
+			
+			dres2 = document.querySelector('#result2');<br>
+			dres2 = documen.body; : body의 색 변경<br>
+			<input type = "button" id ="start" value ="확인" onclick = "proc2()">
+			<input type = "button" value ="종료" onclick = "proc3()">
+			<div id = "result2"></div>
+		</div>
+	</body>
+</html>

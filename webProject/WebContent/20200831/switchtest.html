@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>성적구하기</title>
+		<link href ="../CSS/public.css" rel ="stylesheet">
+		<script>
+		function proc1() {
+			
+			input = prompt("점수입력", "0~100사이");
+			
+			str = "입력 값 : " + input + "<br>";
+			
+			input = parseInt(input/10);
+			
+			switch(input){
+			
+			case 10:
+			case 9:
+				res = "A"
+				break;
+			case 8:
+				res = "B"
+				break;
+			case 7:
+				res = "C"
+				break;
+			case 6:
+				res = "D"
+				break;
+			default :
+				res = "F"
+				break;
+			
+			}
+			
+			str += "성적  : " + res + "<br>";
+			document.querySelector('#result1').innerHTML = str;
+			
+		}
+		
+		</script>
+	</head>
+	<body>
+		
+		<div class ="box">
+			<h3>성적구하기</h3>
+			prompt를 이용하여 점수(0~100)를 입력한다<br>
+			
+			<input type = "button" value ="확인" onclick = "proc1()">
+			<div id = "result1"></div>
+		</div>
+	</body>
+</html>

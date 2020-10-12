@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form_basic</title>
+	</head>
+	<body>
+					<!-- 반드시 form태그가 존재해야지만 action page로 이동이 가능하다
+					action page로 이동시에 form의 데이터 값들을 가지고 이동한다
+					
+					method = "post" / 보안이 향상됨(파라미터들이 URL에 보이지 않음) **되도록 post를 사용!!
+					method = "get" / 보안에 취약 (파라미터들이 URL에 그대로 노출) **생략이 가능
+					
+					radio 버튼의 경우에는 name값을 동일하게 써주어야 하지만 다중선택 불가
+					checkbox의 경우에는 name값을 동일하게 작성해도 다중선택 가능			
+					
+					checked는 브라우저를 로딩할 때 첫화면에서 체크가 되어있게 하는 속성이다
+					
+					select는 유일하게 input type으로 시작하지 않는다 주의!!!
+					안에 내용은 <option></option>으로 표기하며
+					value를 생략할 경우 option에 있는 텍스트가 데이터로 전달된다
+					
+					input type ="button"의 경우는 클릭시 해당페이지에 머물러 있지만 
+					<button>의 경우는 submit과 동일하게 action페이지로 이동한다.
+					 -->
+			<form action ="result.html"  method ="post"> <!-- method ="post" : 물음표가 생기지 않는다 보안에 강하다 -->
+			<!-- result.html?name=Unezzzang
+			&pwd=1234
+			&gender=female  -->
+					아이디 : <input type ="text" name = "name"><br>
+					비밀번호 : <input type ="password" name ="pwd"> 
+					<hr>
+					중복확인
+					<input 버튼>
+					<input type ="radio" name = "gender" value ="male">남성<br> <!--  name = "gender" 값을 같게하면 중복 선택 불가하다 -->
+					<input type ="radio" name ="gender" value ="female">여성<br>
+					<hr>
+					취미를 입력해주세요<br>
+					<input type ="checkbox" name = "hobby" value = "training" checked> 운동	<!-- checked 첫화면부터 체크되는 속서ㅏㅇ -->
+					<input type ="checkbox" name = "hobby"value = "movie"> 영화감상
+					<input type ="checkbox" name = "hobby" value = "music"> 음악감상
+					<br><br>
+					생년월일<br>
+					<select name ="year">
+						<option value ="2020">2020년</option>
+						<option value ="2019">2019년</option>
+						<option value ="2018">2018년</option>
+						<option value ="2017">2017년</option>
+						<option value ="2016">2016년</option>
+						<option value ="2015">2015년</option>
+						<option value ="2014">2014년</option>
+					</select>년			
+					<select name ="month">
+						<option>1월</option>
+						<option>2월</option>
+						<option>3월</option>
+						<option>4월</option>
+						<option>5월</option>
+						<option>6월</option>
+						<option>8월</option>
+					</select>월
+					<select name ="day">
+						<option>1일</option>
+						<option>10일</option>
+						<option>11일</option>
+						<option>12일</option>
+						<option>15일</option>
+						<option>20일</option>
+						<option>21일</option>
+					</select>일
+					<br>
+					이메일
+					<input type = "text" name ="emailAddress"> @<input type = "text" name ="domain">
+					
+					<br>
+					버튼
+					<input type = "button"  value ="버튼입니다" onclick = "alert('버튼이 눌렸습니다')">
+					<button>두번째 버튼입니다.</button>
+					<br>
+					
+					
+					<input type ="submit" value ="회원가입">
+					
+					
+			</form>
+	</body>
+</html>
